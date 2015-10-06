@@ -1,5 +1,7 @@
 FROM ubuntu:latest
-RUN apt-get update \
+RUN locale-gen en_US.UTF-8 \
+	&& export LANG=en_US.UTF-8 \
+	&& apt-get update \
 	&& apt-get install -y software-properties-common \
 	&& add-apt-repository -y ppa:ondrej/php5-5.6 \
 	&& apt-get update \
