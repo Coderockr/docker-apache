@@ -5,7 +5,37 @@ RUN locale-gen en_US.UTF-8 \
 	&& apt-get install -y software-properties-common \
 	&& add-apt-repository -y ppa:ondrej/php5-5.6 \
 	&& apt-get update \
-    && apt-get -y install apache2 libapache2-mod-php5 php5 php5-cli php5-xdebug sqlite3 php5-mysql php-apc php5-apcu php5-geoip php5-imagick php5-mcrypt php5-mongo php5-memcache php-pear curl imagemagick php5-dev php5-dbg php5-gd npm nodejs-legacy php5-json php5-curl php5-sqlite php5-intl apache2 vim git-core wget \
+    && apt-get -y install \
+		apache2 \
+		libapache2-mod-php5 \
+		php5 \
+		php5-cli \
+		php5-xdebug \
+		sqlite3 \
+		php5-mysql \
+		php-apc \
+		php5-apcu \
+		php5-geoip \
+		php5-imagick \
+		php5-mcrypt \
+		php5-mongo \
+		php5-memcached \
+		php-pear \
+		curl \
+		imagemagick \
+		php5-dev \
+		php5-dbg \
+		php5-gd \
+		npm \
+		nodejs-legacy \
+		php5-json \
+		php5-curl \
+		php5-sqlite \
+		php5-intl \
+		apache2 \
+		vim \
+		git-core \
+		wget \
 	&& a2enmod headers \
 	&& a2enmod rewrite \
 	&& npm install -g grunt-cli bower
